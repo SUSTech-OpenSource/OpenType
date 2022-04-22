@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.ReactiveUI;
@@ -16,9 +17,12 @@ namespace OpenType
 
         // Avalonia configuration, don't remove; also used by visual designer.
         public static AppBuilder BuildAvaloniaApp()
-            => AppBuilder.Configure<App>()
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            return AppBuilder.Configure<App>()
                 .UsePlatformDetect()
                 .LogToTrace()
                 .UseReactiveUI();
+        }
     }
 }

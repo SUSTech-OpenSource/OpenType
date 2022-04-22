@@ -1,6 +1,8 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Avalonia.Platform;
+using OpenType.Config;
 using OpenType.ViewModels;
 using OpenType.Views;
 
@@ -25,5 +27,11 @@ namespace OpenType
 
             base.OnFrameworkInitializationCompleted();
         }
+        public override void RegisterServices()
+        {
+            AvaloniaLocator.CurrentMutable.Bind<IFontManagerImpl>().ToConstant(new FontManagerImpl());
+            base.RegisterServices();
+        }
     }
+    
 }
