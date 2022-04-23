@@ -1,3 +1,7 @@
+---
+name: other issue report
+about: Some other issues
+---
 # Other issue report
 - [ ] Be sure to make sure that the existing template does not meet your needs, and if you confirm that it does not, put an x in front of this item
 

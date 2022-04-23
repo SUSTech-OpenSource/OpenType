@@ -1,3 +1,8 @@
+---
+name: doc modify issue
+about: use if you want add a new doc or modify a doc
+---
+
 # Doc modify request
 - [ ] modify doc
 - [ ] add doc
